@@ -21,7 +21,6 @@
       }
 
       body {
-        min-width: 20rem;
         min-height: 100vh;
         margin: 0;
         background:
@@ -31,7 +30,7 @@
       }
 
       .page {
-        width: min(100% - 2rem, 70rem);
+        width: min(calc(100% - 2rem), 70rem);
         margin: 0 auto;
         padding: 1.25rem 0 3rem;
       }
@@ -123,6 +122,8 @@
       }
 
       .art-card {
+        width: 100%;
+        margin: 0;
         overflow: hidden;
         border: 1px solid rgb(255 255 255 / 14%);
         border-radius: 1.5rem;
@@ -139,17 +140,33 @@
 
       @media (max-width: 48rem) {
         header {
-          align-items: flex-start;
+          align-items: stretch;
           flex-direction: column;
         }
 
+        .brand {
+          align-self: center;
+        }
+
         nav ul {
-          justify-content: flex-start;
+          justify-content: center;
         }
 
         main {
           grid-template-columns: 1fr;
-          padding-top: 4rem;
+          justify-items: center;
+          gap: 2.5rem;
+          padding: 3rem 0 1.5rem;
+          text-align: center;
+        }
+
+        h1 {
+          max-width: none;
+        }
+
+        .intro {
+          margin-right: auto;
+          margin-left: auto;
         }
 
         .art-card {
