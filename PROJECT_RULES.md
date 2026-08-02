@@ -267,7 +267,22 @@ Do not perform the following without explicit approval:
 - refactor working code outside the task scope;
 - add features that were not requested.
 
-## 17. Priority Order
+## 17. Current Portfolio Requirements
+
+This is a personal DevOps engineer portfolio website.
+
+- Hosting must remain free through GitHub Pages.
+- The site must use HTML5, CSS3, and Vanilla JavaScript ES6+.
+- The site must remain lightweight, fast, fully static, and easy to maintain.
+- The design should be modern, minimal, and professional.
+- Development must follow a mobile-first approach.
+- Desktop navigation belongs at the top of the page.
+- Mobile navigation uses a compact burger menu.
+- The main sections are Home, About, Skills, Certifications, Projects, and Contact.
+- The Projects section displays DevOps projects and links to their GitHub repositories.
+- Do not add extra pages, sections, or features without an explicit request.
+
+## 18. Priority Order
 
 When rules conflict, use this priority:
 
