@@ -1,213 +1,181 @@
 <!doctype html>
-<html lang="uk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Персональне портфоліо — незабаром."
+      content="Alex Morgan — DevOps Engineer portfolio focused on cloud infrastructure and reliable delivery."
     />
-    <title>Portfolio — незабаром</title>
-    <style>
-      :root {
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-          "Segoe UI", sans-serif;
-        color: #f7f1ff;
-        background: #16132c;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        min-height: 100vh;
-        margin: 0;
-        background:
-          radial-gradient(circle at 12% 10%, #4b3e8c 0, transparent 26rem),
-          radial-gradient(circle at 88% 88%, #1e6971 0, transparent 28rem),
-          #16132c;
-      }
-
-      .page {
-        width: min(calc(100% - 2rem), 70rem);
-        margin: 0 auto;
-        padding: 1.25rem 0 3rem;
-      }
-
-      header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        padding: 0.75rem;
-        border: 1px solid rgb(255 255 255 / 12%);
-        border-radius: 1.25rem;
-        background: rgb(22 19 44 / 72%);
-        box-shadow: 0 1.25rem 3.75rem rgb(6 5 23 / 24%);
-        backdrop-filter: blur(1rem);
-      }
-
-      .brand {
-        padding: 0.5rem 0.75rem;
-        color: #fff5d5;
-        font-weight: 800;
-        letter-spacing: -0.03em;
-        text-decoration: none;
-      }
-
-      nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        gap: 0.5rem;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      nav button {
-        padding: 0.55rem 0.75rem;
-        border: 1px solid rgb(255 255 255 / 16%);
-        border-radius: 0.75rem;
-        color: inherit;
-        background: rgb(255 255 255 / 8%);
-        font: inherit;
-        font-size: 0.875rem;
-        cursor: pointer;
-      }
-
-      nav button:hover,
-      nav button:focus-visible {
-        border-color: #f7ca8c;
-        outline: none;
-        background: #f7ca8c;
-        color: #292044;
-      }
-
-      main {
-        display: grid;
-        grid-template-columns: 1fr minmax(16rem, 0.85fr);
-        align-items: center;
-        gap: clamp(2rem, 7vw, 6rem);
-        padding: clamp(3.5rem, 10vw, 7rem) clamp(0.25rem, 3vw, 2rem) 1rem;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        margin: 0 0 1rem;
-        padding: 0.4rem 0.7rem;
-        border: 1px solid rgb(247 202 140 / 40%);
-        border-radius: 999px;
-        color: #ffe0ae;
-        background: rgb(247 202 140 / 10%);
-        font-size: 0.875rem;
-        font-weight: 700;
-      }
-
-      h1 {
-        max-width: 11ch;
-        margin: 0;
-        font-size: clamp(3rem, 8vw, 6.25rem);
-        line-height: 0.94;
-        letter-spacing: -0.065em;
-      }
-
-      .intro {
-        max-width: 33rem;
-        margin: 1.5rem 0 0;
-        color: #d5cce5;
-        font-size: clamp(1rem, 2vw, 1.2rem);
-        line-height: 1.7;
-      }
-
-      .art-card {
-        width: 100%;
-        margin: 0;
-        overflow: hidden;
-        border: 1px solid rgb(255 255 255 / 14%);
-        border-radius: 1.5rem;
-        background: #0f1834;
-        box-shadow: 0 1.5rem 3rem rgb(5 5 22 / 35%);
-      }
-
-      .art-card img {
-        display: block;
-        width: 100%;
-        height: auto;
-        image-rendering: pixelated;
-      }
-
-      @media (max-width: 48rem) {
-        header {
-          align-items: stretch;
-          flex-direction: column;
-        }
-
-        .brand {
-          align-self: center;
-        }
-
-        nav ul {
-          justify-content: center;
-        }
-
-        main {
-          grid-template-columns: 1fr;
-          justify-items: center;
-          gap: 2.5rem;
-          padding: 3rem 0 1.5rem;
-          text-align: center;
-        }
-
-        h1 {
-          max-width: none;
-        }
-
-        .intro {
-          margin-right: auto;
-          margin-left: auto;
-        }
-
-        .art-card {
-          width: min(100%, 32rem);
-        }
-      }
-    </style>
+    <title>Alex Morgan — DevOps Engineer</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="module" src="assets/js/main.js"></script>
   </head>
   <body>
-    <div class="page">
-      <header>
-        <a class="brand" href="/portfolio/">Portfolio</a>
-        <nav aria-label="Основна навігація">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#home" aria-label="Alex Morgan home">AM<span>.</span></a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          <span class="sr-only">Open menu</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        <nav id="site-navigation" class="site-navigation" aria-label="Primary navigation">
           <ul>
-            <li><button type="button">Button 1</button></li>
-            <li><button type="button">Button 2</button></li>
-            <li><button type="button">Button 3</button></li>
-            <li><button type="button">Button 4</button></li>
-            <li><button type="button">Button 5</button></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </header>
 
-      <main>
-        <section aria-labelledby="page-title">
-          <p class="eyebrow">Сайт у процесі створення</p>
-          <h1 id="page-title">Portfolio</h1>
-          <p class="intro">
-            Тут незабаром з’являться вибрані роботи, досвід і спосіб зв’язатися зі мною.
+      <main id="main-content">
+        <section id="home" class="hero section" aria-labelledby="hero-title">
+          <div class="hero__content">
+            <p class="eyebrow">DevOps Engineer · Cloud · Automation</p>
+            <h1 id="hero-title">Building calm, reliable delivery systems.</h1>
+            <p class="hero__intro">
+              Alex Morgan is a DevOps Engineer focused on cloud infrastructure,
+              automation, and dependable deployments.
+            </p>
+            <a class="button button--primary" href="#projects">View projects</a>
+          </div>
+          <figure class="art-card">
+            <img
+              src="hero-pixel-art.png"
+              width="640"
+              height="640"
+              alt="Pixel-art night landscape with a moon over a lake"
+            />
+          </figure>
+        </section>
+
+        <section id="about" class="section section--split" aria-labelledby="about-title">
+          <div>
+            <p class="section-label">01 / About</p>
+            <h2 id="about-title">Reliable systems start with clear thinking.</h2>
+          </div>
+          <p>
+            I design practical infrastructure and delivery workflows that help teams
+            ship with confidence. My approach combines automation, observability, and
+            documentation to keep operations understandable and resilient.
           </p>
         </section>
 
-        <figure class="art-card">
-          <img
-            src="hero-pixel-art.png"
-            width="640"
-            height="640"
-            alt="Піксельний нічний пейзаж із місяцем над озером"
-          />
-        </figure>
+        <section id="skills" class="section" aria-labelledby="skills-title">
+          <p class="section-label">02 / Skills</p>
+          <h2 id="skills-title">Tools I work with</h2>
+          <ul class="tag-list" aria-label="DevOps skills">
+            <li>Linux</li>
+            <li>Git</li>
+            <li>Docker</li>
+            <li>GitHub Actions</li>
+            <li>CI/CD</li>
+            <li>AWS</li>
+            <li>Terraform</li>
+            <li>Kubernetes</li>
+          </ul>
+        </section>
+
+        <section id="certifications" class="section" aria-labelledby="certifications-title">
+          <p class="section-label">03 / Certifications</p>
+          <h2 id="certifications-title">Learning in public</h2>
+          <ul class="card-list">
+            <li class="info-card">
+              <h3>AWS Certified Cloud Practitioner</h3>
+              <p>Cloud fundamentals and AWS core services.</p>
+            </li>
+            <li class="info-card">
+              <h3>Linux Foundation Certified System Administrator</h3>
+              <p>Practical Linux administration and operations.</p>
+            </li>
+            <li class="info-card">
+              <h3>Terraform Associate</h3>
+              <p>Infrastructure as code with HashiCorp Terraform.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section id="projects" class="section" aria-labelledby="projects-title">
+          <p class="section-label">04 / Projects</p>
+          <h2 id="projects-title">Selected infrastructure work</h2>
+          <div class="project-grid">
+            <article class="project-card">
+              <p class="project-card__number">01</p>
+              <h3>Release pipeline</h3>
+              <p>Automated testing and deployment workflow for a static application.</p>
+              <ul class="project-card__stack" aria-label="Release pipeline technologies">
+                <li>GitHub Actions</li>
+                <li>Docker</li>
+              </ul>
+              <a
+                class="text-link"
+                href="https://github.com/andrewromanchukk/portfolio"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View repository <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+            <article class="project-card">
+              <p class="project-card__number">02</p>
+              <h3>Cloud foundations</h3>
+              <p>Reusable infrastructure patterns for a small cloud environment.</p>
+              <ul class="project-card__stack" aria-label="Cloud foundations technologies">
+                <li>AWS</li>
+                <li>Terraform</li>
+              </ul>
+              <a
+                class="text-link"
+                href="https://github.com/andrewromanchukk/portfolio"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View repository <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+            <article class="project-card">
+              <p class="project-card__number">03</p>
+              <h3>Container platform</h3>
+              <p>Containerized service setup with a clear local development path.</p>
+              <ul class="project-card__stack" aria-label="Container platform technologies">
+                <li>Linux</li>
+                <li>Kubernetes</li>
+              </ul>
+              <a
+                class="text-link"
+                href="https://github.com/andrewromanchukk/portfolio"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View repository <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="section contact" aria-labelledby="contact-title">
+          <p class="section-label">05 / Contact</p>
+          <h2 id="contact-title">Have a system to make simpler?</h2>
+          <p>For now, reach me at the placeholder address below.</p>
+          <a class="contact__email" href="mailto:alex.morgan@example.com">alex.morgan@example.com</a>
+        </section>
       </main>
+
+      <footer class="site-footer">
+        <p>© 2026 Alex Morgan</p>
+        <a href="#home">Back to top ↑</a>
+      </footer>
     </div>
   </body>
 </html>
